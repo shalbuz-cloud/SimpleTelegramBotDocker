@@ -4,7 +4,6 @@ import logging
 
 from config import host, PG_USER, PG_PASS
 
-
 logging.basicConfig(format=u'%(filename)s [LINE:%(lineno)d] #%(levelname)-8s '
                            u'[%(asctime)s] %(message)s', level=logging.INFO)
 
@@ -20,8 +19,8 @@ async def create_db():
     )
 
     await conn.execute(create_db_command)
-    logging.info('Table has been created')
     await conn.close()
+    logging.info("Table users created")
 
 
 async def create_pool():

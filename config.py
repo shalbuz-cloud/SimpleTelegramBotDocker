@@ -1,8 +1,6 @@
 from os import getenv
 
-from dotenv import load_dotenv
-
-load_dotenv()
+# Теперь за нас переменные окружения подгрузит докер
 
 TOKEN = getenv('TOKEN')
 admin_id = getenv('ADMIN_ID')
